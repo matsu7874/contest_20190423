@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
 import generator
 
-a, b, c = map(int, input().split())
-assert generator.MIN_V <= a < b < c <= generator.MAX_V, (a, b, c)
+N, M = map(int, input().split())
+assert generator.MIN_N <= N <= generator.MAX_N and generator.MIN_M <= M <= generator.MAX_M, (N, M)

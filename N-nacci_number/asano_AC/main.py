@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 MOD = 10**9 + 7
 N,M = map(int, input().split())
+if M == 0:
+    print(0)
+    exit()
 a = [0 for i in range(M+1)]
 a[1] = 1
 

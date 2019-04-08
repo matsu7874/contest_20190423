@@ -1,4 +1,4 @@
 # -*- coding: utf-8; mode: python -*-
 
 ## Solution
-script_solution(src='main.py', challenge_cases = []) # shebang line is required
+script_solution(src='main.py', challenge_cases = ['input_3.in']) # shebang line is required
