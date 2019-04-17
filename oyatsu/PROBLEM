@@ -3,7 +3,7 @@
 pid='A'
 
 problem(
-  time_limit=1.0,
+  time_limit=2.929,
   id=pid,
   title=pid + ": Sample ABC",
   reference_solution='asano_AC',
