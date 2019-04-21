@@ -5,7 +5,7 @@ pid='A'
 problem(
   time_limit=1.0,
   id=pid,
-  title=pid + ": Sample ABC",
-  reference_solution='matsu7874_AC',
+  title=pid + ": tansan",
+  reference_solution='hiroendore_AC',
   )
 
