@@ -49,6 +49,9 @@ def main():
 
     # corner case
     testcases.append(TestCase(100, 3, [101, 209, 329]))
+    testcases.append(TestCase(MAX_N, MAX_M, [MAX_N-2-i for i in range(MAX_M-1)] + [MAX_M//2 + 1]))
+    testcases.append(TestCase(MAX_N, MAX_M, [MIN_a]*MAX_M))
+    testcases.append(TestCase(MAX_N, MAX_M, [MIN_a+i for i in range(MAX_M)]))
 
     # simple case
     size_testcase = len(testcases)
