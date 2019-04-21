@@ -1,0 +1,11 @@
+# -*- coding: utf-8; mode: python -*-
+
+pid='A'
+
+problem(
+  time_limit=2.0,
+  id=pid,
+  title=pid + ": Jinx",
+  reference_solution='matsu7874_AC',
+  )
+
