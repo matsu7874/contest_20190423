@@ -10,9 +10,6 @@ MAX_N = 1000000000
 MIN_M = 1
 MAX_M = 100000
 
-MIN_a = 1
-MAX_a = 100000
-
 class TestCase:
     def __init__(self, _p, N, M, a):
         self._p = _p
@@ -30,7 +27,12 @@ def main():
     testcases.append(TestCase('00_sample', 100, 5, ["T", "L", "T", "L", "T"]))
 
     # corner case
-    #testcases.add(Case('10_corner', 0, 1, 100))
+    testcases.append(TestCase('10_corner', MAX_N, MAX_M, ["T"]*(MAX_M-1)+["L"]))
+    testcases.append(TestCase('10_corner', MAX_N, MAX_M, ["L"]*(MAX_M-1)+["T"]))
+    testcases.append(TestCase('10_corner', MAX_N-MAX_M-1, MAX_M, ["L"]*MAX_M))
+    testcases.append(TestCase('10_corner', 1, MAX_M, ["L"]*MAX_M))
+    testcases.append(TestCase('10_corner', MAX_M, MAX_M, ["T"]*MAX_M))
+    testcases.append(TestCase('10_corner', MAX_M+1, MAX_M, ["L"]*MAX_M))
 
     # random case
     size_testcase = len(testcases)
