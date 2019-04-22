@@ -53,6 +53,9 @@ def main():
     testcases.append(TestCase(MAX_N, MAX_M, [MIN_a]*MAX_M))
     testcases.append(TestCase(MAX_N, MAX_M, [MIN_a+i for i in range(MAX_M)]))
 
+    # worst case on DP
+    testcases.append(TestCase(MAX_N, MAX_M, [1 for i in range(MAX_M)]))
+
     # simple case
     size_testcase = len(testcases)
     while size_testcase < num_testcase - 20:
@@ -81,10 +84,10 @@ def main():
     # complex case
     while size_testcase < num_testcase:
         M = random.randint(MAX_M // 5, MAX_M) if size_testcase < num_testcase - 10 else MAX_M
-        a = random.sample(range(MIN_a // 1000, MAX_a + 1), M)
+        a = random.sample(range(MAX_a // 10000, MAX_a + 1), M)
         answer = make_dplist(M, a)
         max_no = max([i for i in range(MAX_N + 1) if not answer[i]])
-        if max_no >= 30000:
+        if max_no >= 40000:
             if max_no == MAX_N:
                 candidate = TestCase(random.randint(MAX_N // 2, MAX_N), M, a)
             elif random.randint(0,1) == 0:
